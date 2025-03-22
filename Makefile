@@ -1,6 +1,8 @@
 tag=$(shell date +%s)
 
 build:
-	docker build -t jwhittem/util-pod:${tag} .
-	docker push jwhittem/util-pod:${tag}
-	
+	docker build --network=host -t kubedevlab/util-pod:${tag} .
+	docker tag kubedevlab/util-pod:${tag} kubedevlab/util-pod:latest
+	docker push kubedevlab/util-pod:${tag}
+	docker push kubedevlab/util-pod:latest
+
