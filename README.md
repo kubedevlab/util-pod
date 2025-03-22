@@ -1,2 +1,12 @@
-# util-pod
-A utility pod for testing from within inside a k8s cluster
+# utilpod
+
+This is a simple pod with troubleshooting utilities pre-installed.
+
+## packages
+
+- vim 
+- git
+- bind-tools
+- curl
+- mysql-client
+- aws-cli
